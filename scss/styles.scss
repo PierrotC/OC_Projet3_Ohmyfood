@@ -29,6 +29,14 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -37,7 +45,7 @@ header {
     // box-shadow: 0px 1px 9px 0px #686868;
 }
 
-#loc {
+#user_loc {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +67,7 @@ header {
         width: 75%;
     }
     & p {
-        font-weight: lighter;
+        font-weight: 300;
     }
     & button {
         background: linear-gradient(-5deg, $color-primary, $color-secondary);
@@ -80,7 +88,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    & h1 {
+    & h2 {
         align-self: flex-start;
     }
     & .steps {
@@ -113,12 +121,73 @@ header {
     }
 }
 
-#cards {
+#restaurants {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color-grey-back-2;
+    & h2 {
+        width: 90vw;
+    }
     & .card
         {  
             box-shadow: 5px 5px 5px rgb(234,234,234);
             border-radius: 20px;
             margin: 15px 5px;
             border: 5px white solid;
+            width: 90vw;
+            position: relative;
+            & img {
+                object-fit: cover;
+                width: 100%;
+                height: 50vw;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            & .new {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                color: #269E80;
+                background-color: #99E2D0;
+                border-radius: 2px;
+                padding: 7px 12px;
+                font-size: small;
+            }
+            & .info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 10px;
+                & .text {
+                    & .loc {
+                        font-weight: 300;
+                    }
+                }
+                & .fav {
+                    padding: 0 15px;
+                }
+            }
         }
+}
+
+footer {
+    color: white;
+    background-color: $color-grey-footer;
+    width: 100vw;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    & .logo {
+        font-family: $font-shrik;
+        margin-bottom: 10px;
+    }
+    & ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 1.6;
+        width: 90%;
+    }
 }
