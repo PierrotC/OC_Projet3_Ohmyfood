@@ -63,7 +63,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    & > * {
+    margin-bottom: 60px;
+    & p, #intro h1 {
         width: 75%;
     }
     & p {
@@ -74,18 +75,18 @@ header {
         font-family: $font-roboto;
         color: white;
         padding: 15px;
-        width: 50%;
         margin: 20px 0;
         border: none;
         border-radius: 50px;
         cursor: pointer;
+        font-size: 16px;
     }
 }
 
 #guide {
     width: 90%;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-direction: column;
     & h2 {
@@ -94,18 +95,19 @@ header {
     & .steps {
         display: flex;
         align-items: center;
-        // justify-content: center;
         background-color: $color-grey-back-2;
-        border-radius: 15px;
+        border-radius: 20px;
         box-shadow: 5px 5px 5px 0px #EBEBEB;
-        padding: 15px 0;
-        width: 100%;
+        padding: 25px 0;
+        margin-bottom: 20px;
+        margin-left: 13px;
         position: relative;
         & div {
             position: absolute;
             color: white;
-            left: -10px;
-            top: 25%;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
             background-color: $color-primary;
             border-radius: 50%;
             width: 25px;
@@ -115,8 +117,18 @@ header {
             justify-content: center;
         }
         & i {
-            margin: 0 25px;
             color: #8D8D8D;
+            font-size: 20px;
+            padding: 0 25px 0 37px;
+        }
+        & p {
+            font-weight: 500;
+        }
+    }
+    & .steps:last-child {
+        background-color: #F5EDFF;
+        & i {
+        color: $color-primary;
         }
     }
 }
@@ -135,9 +147,9 @@ header {
         {  
             box-shadow: 5px 5px 5px rgb(234,234,234);
             border-radius: 20px;
-            margin: 15px 5px;
+            margin-bottom: 10px;
             border: 5px white solid;
-            width: 90vw;
+            width: 90%;
             position: relative;
             & img {
                 object-fit: cover;
@@ -165,9 +177,15 @@ header {
                     & .loc {
                         font-weight: 300;
                     }
+                    & .name {
+                        font-weight: 500;
+                    }
                 }
                 & .fav {
                     padding: 0 15px;
+                    &:hover {
+                        background-color: $color-primary;
+                    }
                 }
             }
         }
@@ -189,5 +207,8 @@ footer {
         padding: 0;
         line-height: 1.6;
         width: 90%;
+        & li i {
+            margin-right: 10px;
+        }
     }
 }

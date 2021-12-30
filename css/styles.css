@@ -58,63 +58,66 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 60px;
 }
 
-/* line 66, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
-#intro > * {
+/* line 67, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+#intro p, #intro #intro h1 {
   width: 75%;
 }
 
-/* line 69, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 70, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #intro p {
   font-weight: 300;
 }
 
-/* line 72, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 73, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #intro button {
   background: linear-gradient(-5deg, #9356DC, #FF79DA);
   font-family: "Roboto", sans-serif;
   color: white;
   padding: 15px;
-  width: 50%;
   margin: 20px 0;
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-/* line 85, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 86, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #guide {
   width: 90%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-direction: column;
 }
 
-/* line 91, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 92, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #guide h2 {
   align-self: flex-start;
 }
 
-/* line 94, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 95, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #guide .steps {
   display: flex;
   align-items: center;
   background-color: #F6F6F6;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 5px 5px 5px 0px #EBEBEB;
-  padding: 15px 0;
-  width: 100%;
+  padding: 25px 0;
+  margin-bottom: 20px;
+  margin-left: 13px;
   position: relative;
 }
 
-/* line 104, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 105, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #guide .steps div {
   position: absolute;
   color: white;
-  left: -10px;
-  top: 25%;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: #9356DC;
   border-radius: 50%;
   width: 25px;
@@ -124,13 +127,29 @@ header {
   justify-content: center;
 }
 
-/* line 117, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 119, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #guide .steps i {
-  margin: 0 25px;
   color: #8D8D8D;
+  font-size: 20px;
+  padding: 0 25px 0 37px;
 }
 
 /* line 124, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+#guide .steps p {
+  font-weight: 500;
+}
+
+/* line 128, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+#guide .steps:last-child {
+  background-color: #F5EDFF;
+}
+
+/* line 130, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+#guide .steps:last-child i {
+  color: #9356DC;
+}
+
+/* line 136, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants {
   width: 100vw;
   display: flex;
@@ -140,22 +159,22 @@ header {
   background-color: #F6F6F6;
 }
 
-/* line 131, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 143, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants h2 {
   width: 90vw;
 }
 
-/* line 134, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 146, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants .card {
   box-shadow: 5px 5px 5px #eaeaea;
   border-radius: 20px;
-  margin: 15px 5px;
+  margin-bottom: 10px;
   border: 5px white solid;
-  width: 90vw;
+  width: 90%;
   position: relative;
 }
 
-/* line 142, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 154, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants .card img {
   object-fit: cover;
   width: 100%;
@@ -164,7 +183,7 @@ header {
   border-top-right-radius: 20px;
 }
 
-/* line 149, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 161, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants .card .new {
   position: absolute;
   top: 5%;
@@ -176,7 +195,7 @@ header {
   font-size: small;
 }
 
-/* line 159, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 171, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants .card .info {
   display: flex;
   align-items: center;
@@ -184,17 +203,27 @@ header {
   padding: 15px 10px;
 }
 
-/* line 165, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 177, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants .card .info .text .loc {
   font-weight: 300;
 }
 
-/* line 169, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 180, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+#restaurants .card .info .text .name {
+  font-weight: 500;
+}
+
+/* line 184, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 #restaurants .card .info .fav {
   padding: 0 15px;
 }
 
-/* line 176, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 186, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+#restaurants .card .info .fav:hover {
+  background-color: #9356DC;
+}
+
+/* line 194, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 footer {
   color: white;
   background-color: #353535;
@@ -204,18 +233,23 @@ footer {
   justify-content: center;
 }
 
-/* line 183, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 201, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 footer .logo {
   font-family: "Shrikhand", cursive;
   margin-bottom: 10px;
 }
 
-/* line 187, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+/* line 205, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
 footer ul {
   list-style-type: none;
   padding: 0;
   line-height: 1.6;
   width: 90%;
+}
+
+/* line 210, ../OpenClassrooms/Projets/Formation dev web/Projet 3/Projet/scss/styles.scss */
+footer ul li i {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
