@@ -1,0 +1,21 @@
+footer {
+    color: white;
+    background-color: $color-grey-footer;
+    width: 100vw;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    & .logo {
+        font-family: $font-shrik;
+        margin-bottom: 10px;
+    }
+    & ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 1.6;
+        width: 90%;
+        & li i {
+            margin-right: 10px;
+        }
+    }
+}

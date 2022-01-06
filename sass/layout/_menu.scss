@@ -1,0 +1,18 @@
+header {
+    position: relative;
+    width: 100%;
+    .fas {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 15px;
+    }
+    img {
+        height: 25px;
+    }
+}
+
+.restaurant-picture {
+    width: 100%;
+}
