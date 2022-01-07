@@ -7,3 +7,27 @@
     display: flex;
     flex-direction: row;
 }
+
+.grid {
+    display: grid;
+}
+
+.bg_grey_2 {
+    background-color: $color-grey-back-2;
+}
+
+.bg_white {
+    background-color: white;
+}
+
+.typo_light {
+    font-weight: 300;
+}
+
+.typo_standard {
+    font-weight: 400;
+}
+
+.typo_bold {
+    font-weight: 500;
+}

@@ -106,12 +106,9 @@ header {
     }
     & .card
         {  
-            box-shadow: 5px 5px 5px rgb(234,234,234);
-            border-radius: 20px;
-            margin-bottom: 10px;
             border: 5px white solid;
-            width: 90%;
             position: relative;
+            @include card;
             & img {
                 object-fit: cover;
                 width: 100%;

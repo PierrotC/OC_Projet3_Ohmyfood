@@ -1,0 +1,21 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./sass/main.css",
+    "prefix": "postcss ./sass/main.css --use autoprefixer -d ./sass/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierrotC/PierreCourteille_3_14122021.git"
+  },
+  "author": "PierrotC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierrotC/PierreCourteille_3_14122021/issues"
+  },
+  "homepage": "https://github.com/PierrotC/PierreCourteille_3_14122021#readme",
+  "browserslist": "last 4 versions"
+}
