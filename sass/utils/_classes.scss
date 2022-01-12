@@ -8,6 +8,12 @@
     flex-direction: row;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .grid {
     display: grid;
 }
@@ -30,4 +36,8 @@
 
 .typo_bold {
     font-weight: 500;
+}
+
+.card-padding {
+    padding: $card-padding;
 }

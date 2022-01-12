@@ -8,6 +8,12 @@
   flex-direction: row;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid {
   display: grid;
 }
@@ -30,6 +36,10 @@
 
 .typo_bold {
   font-weight: 500;
+}
+
+.card-padding {
+  padding: 10px;
 }
 
 body {
@@ -56,6 +66,20 @@ a {
 
 a:visited {
   color: black;
+}
+
+button {
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 15px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  justify-self: center;
+  width: fit-content;
 }
 
 footer {
@@ -106,6 +130,10 @@ header img {
   border-top-right-radius: 40px;
   width: 100%;
 }
+.menu button {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 .restaurant_head {
   font-family: "Shrikhand", cursive;
@@ -117,44 +145,84 @@ header img {
 }
 .restaurant_head__fav {
   margin: 0 15px;
-  justify-content: center;
   font-size: 25px;
+  line-height: 1.5;
 }
 
 .course {
   align-items: center;
+  margin-bottom: 15px;
 }
 .course .container {
   width: 90%;
-  align-items: center;
 }
 .course__cat {
   text-transform: uppercase;
-  align-self: stretch;
 }
 .course__div {
   background-color: #99E2D0;
   width: 40px;
   height: 3px;
   margin: 5px 0 15px 0;
+  align-self: start;
 }
 .course__choice {
   box-shadow: 5px 5px 5px #eaeaea;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 90%;
-  max-width: 100%;
-  position: relative;
-  padding: 10px;
+  cursor: pointer;
+  height: 60px;
+  width: 90%;
+  padding-left: 10px;
+  grid-template: 1fr 1fr/1fr 20% 0;
+  transition: grid-template 400ms;
+  overflow: hidden;
 }
 .course__choice__name {
   font-size: 18px;
   font-weight: 400;
+  padding-bottom: 0;
+  grid-column: 1;
+  align-self: center;
+  padding-top: 10px;
 }
 .course__choice__price {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+  grid-row: 2;
+  grid-column: 2;
+  padding-top: 0;
+  justify-self: center;
+  align-self: center;
+}
+.course__choice__text {
+  grid-row: 2;
+  grid-column: 1;
+  padding-top: 0;
+  align-self: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.course__choice__checked {
+  grid-row: 1/span 2;
+  grid-column: 3;
+  color: white;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 20px;
+}
+.course__choice__checked .fa-circle-check {
+  transition: transform 700ms;
+  transform: rotate(-360deg);
+  transition-delay: transform 4000ms;
+}
+.course__choice:hover, .course__choice .course__choice:active {
+  grid-template: 1fr 1fr/1fr 16% 16%;
+}
+.course__choice:hover > .course__choice__checked .fa-circle-check, .course__choice .course__choice:active > .course__choice__checked .fa-circle-check {
+  transform: rotate(0deg);
+  transition-delay: transform 4000ms;
 }
 
 header {
@@ -189,17 +257,6 @@ header {
 }
 #intro p {
   font-weight: 300;
-}
-#intro button {
-  background: linear-gradient(-5deg, #9356DC, #FF79DA);
-  font-family: "Roboto", sans-serif;
-  color: white;
-  padding: 15px;
-  margin: 20px 0;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
 }
 
 #guide {
@@ -268,8 +325,9 @@ header {
   position: relative;
   box-shadow: 5px 5px 5px #eaeaea;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 90%;
+  cursor: pointer;
 }
 #restaurants .card img {
   object-fit: cover;
@@ -301,10 +359,30 @@ header {
   font-weight: 500;
 }
 #restaurants .card .info .fav {
-  padding: 0 15px;
+  margin: 0 15px;
+  position: relative;
+  transition: background-image 3s;
+  position: relative;
+  font-size: 25px;
+  transition: all 1s;
 }
-#restaurants .card .info .fav:hover {
-  background-color: #9356DC;
+#restaurants .card .info .fav .colored-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  transition: opacity 1s;
+  background-clip: text;
+  color: transparent;
+}
+#restaurants .card .info .fav:hover .colored-heart {
+  opacity: 1;
+  transition: opacity 1s;
+}
+#restaurants .card .info .fav:hover .base-heart {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 /*# sourceMappingURL=main.css.map */

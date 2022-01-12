@@ -23,6 +23,10 @@ header {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
+    & button {
+        padding-left: $padding-btn;
+        padding-right: $padding-btn;
+    }
 }
 
 .restaurant_head {
@@ -34,40 +38,79 @@ header {
     }
     &__fav {
         margin: 0 15px;
-        justify-content: center;
         font-size: 25px;
+        line-height: 1.5;
     }
 }
 
 .course {
     align-items: center;
+    margin-bottom: 15px;
     .container {
         width: 90%;
-        align-items: center;
     }
     &__cat {
         text-transform: uppercase;
-        align-self: stretch;
     }
     &__div {
         background-color: $color-tertiary;
         width: 40px;
         height: 3px;
         margin: 5px 0 15px 0;
+        align-self: start;
     }
     &__choice {
         @include card;
-        max-width: 100%;
-        position: relative;
-        padding: $card-padding;
+        height: 60px;
+        width: 90%;
+        padding-left: $card-padding;
+        grid-template: 1fr 1fr / 1fr 20% 0;
+        transition: grid-template 400ms;
+        overflow: hidden;
         &__name {
             font-size: 18px;
             font-weight: 400;
+            padding-bottom: 0;
+            grid-column: 1;
+            align-self: center;
+            padding-top: $card-padding;
         }
         &__price {
-            position: absolute;
-            right: $card-padding;
-            bottom: $card-padding;
+            grid-row: 2;
+            grid-column: 2;
+            padding-top: 0;
+            justify-self: center;
+            align-self: center;
+        }
+        &__text {
+            grid-row: 2;
+            grid-column: 1;
+            padding-top: 0;
+            align-self: center;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        &__checked {
+            grid-row: 1 / span 2;
+            grid-column: 3;
+            color: white;
+            background-color: $color-tertiary;
+            border-top-right-radius: $card-border-radius;
+            border-bottom-right-radius: $card-border-radius;
+            font-size: 20px;
+            .fa-circle-check {
+                transition: transform 700ms;
+                transform: rotate(-360deg);
+                transition-delay: transform 4000ms;
+            }
+        }
+        &:hover, .course__choice:active {
+            grid-template: 1fr 1fr / 1fr 16% 16%;
+            > .course__choice__checked .fa-circle-check{
+                transform: rotate(0deg);
+                transition-delay: transform 4000ms;
+            }
         }
     }
 }

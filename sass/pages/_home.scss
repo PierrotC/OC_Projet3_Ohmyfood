@@ -31,17 +31,6 @@ header {
     & p {
         font-weight: 300;
     }
-    & button {
-        background: linear-gradient(-5deg, $color-primary, $color-secondary);
-        font-family: $font-roboto;
-        color: white;
-        padding: 15px;
-        margin: 20px 0;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        font-size: 16px;
-    }
 }
 
 #guide {
@@ -140,9 +129,33 @@ header {
                     }
                 }
                 & .fav {
-                    padding: 0 15px;
+                    margin: 0 15px;
+                    position: relative;
+                    transition: background-image 3s;
+                    position: relative;
+                    font-size: 25px;
+                    transition: all 1s;
+
+                    .colored-heart {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        background: linear-gradient($color-primary, $color-secondary);
+                        transition: opacity 1s;
+                        background-clip: text;
+                        color: transparent;
+                    }
+
                     &:hover {
-                        background-color: $color-primary;
+                        .colored-heart {
+                            opacity: 1;
+                            transition: opacity 1s;
+                        }
+                        .base-heart {
+                            opacity: 0;
+                            transition: opacity 1s;
+                        }
                     }
                 }
             }
