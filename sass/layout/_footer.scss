@@ -8,14 +8,28 @@ footer {
     & .logo {
         font-family: $font-shrik;
         margin-bottom: 10px;
+        font-size: 20px;
     }
-    & ul {
+    & ul.footer-list {
         list-style-type: none;
-        padding: 0;
+        padding: 5px 0 15px 15px;
         line-height: 1.6;
         width: 90%;
-        & li i {
-            margin-right: 10px;
+        & li.utensils {
+            &:before {
+                content: "\f2e7";
+                margin-right: 15px;
+            }
+        }
+        & li.handshake {
+            &:before {
+                content: "\f4c4";
+                margin-right: 15px;
+                font-size: 12px;
+            }
+        }
+        & li:before {
+            font-family: "FontAwesome";
         }
     }
 }

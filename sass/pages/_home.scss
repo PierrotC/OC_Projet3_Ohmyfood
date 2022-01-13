@@ -13,23 +13,28 @@ header {
     padding: 15px 0;
     background-color: $color-grey-back-1;
     width: 100%;
+    color: $color-grey-footer;
     & i {
         margin-right: 15px;
     }
 }
 
-#intro {
+.intro {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 60px;
-    & p, #intro h1 {
+    padding: 40px 0;
+    margin-bottom: 50px;
+    & p, h1 {
         width: 75%;
+        margin-bottom: 20px;
     }
     & p {
         font-weight: 300;
+        color: #4D4D4D;
+        font-size: 17px;
     }
 }
 
@@ -39,8 +44,10 @@ header {
     align-items: stretch;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 40px;
     & h2 {
         align-self: flex-start;
+        margin-bottom: 30px;
     }
     & .steps {
         display: flex;
@@ -90,74 +97,72 @@ header {
     justify-content: center;
     flex-direction: column;
     background-color: $color-grey-back-2;
+    padding: 50px 0;
     & h2 {
         width: 90vw;
+        margin-bottom: 20px;
     }
-    & .card
-        {  
-            border: 5px white solid;
-            position: relative;
-            @include card;
-            & img {
-                object-fit: cover;
-                width: 100%;
-                height: 50vw;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-            }
-            & .new {
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                color: #269E80;
-                background-color: #99E2D0;
-                border-radius: 2px;
-                padding: 7px 12px;
-                font-size: small;
-            }
-            & .info {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 15px 10px;
-                & .text {
-                    & .loc {
-                        font-weight: 300;
-                    }
-                    & .name {
-                        font-weight: 500;
-                    }
+    & .card {
+        position: relative;
+        @include card;
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 50vw;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        & .new {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            color: #269E80;
+            background-color: #99E2D0;
+            border-radius: 2px;
+            padding: 7px 12px;
+            font-size: small;
+        }
+        & .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 10px;
+            & .text {
+                & .loc {
+                    font-weight: 300;
                 }
-                & .fav {
-                    margin: 0 15px;
-                    position: relative;
-                    transition: background-image 3s;
-                    position: relative;
-                    font-size: 25px;
-                    transition: all 1s;
-
-                    .colored-heart {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        background: linear-gradient($color-primary, $color-secondary);
-                        transition: opacity 1s;
-                        background-clip: text;
-                        color: transparent;
-                    }
-
-                    &:hover {
-                        .colored-heart {
-                            opacity: 1;
-                            transition: opacity 1s;
-                        }
-                        .base-heart {
-                            opacity: 0;
-                            transition: opacity 1s;
-                        }
-                    }
+                & .name {
+                    font-weight: 500;
                 }
+            }
+            & .fav {
+                margin: 0 15px;
+                position: relative;
+                font-size: 25px;
+                // transition: all 1s;
             }
         }
+    }
+}
+
+.heart {
+    z-index: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    transition: opacity 1s;
+    &--hover {
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient($color-primary, $color-secondary);
+        transition: opacity 500ms;
+        background-clip: text;
+        color: transparent;
+        justify-self: flex-end;
+    }
+    &:hover {
+        opacity: 0;
+        + .heart--hover {
+            opacity: 1;
+        }
+    }
 }

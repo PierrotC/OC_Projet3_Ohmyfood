@@ -93,15 +93,25 @@ footer {
 footer .logo {
   font-family: "Shrikhand", cursive;
   margin-bottom: 10px;
+  font-size: 20px;
 }
-footer ul {
+footer ul.footer-list {
   list-style-type: none;
-  padding: 0;
+  padding: 5px 0 15px 15px;
   line-height: 1.6;
   width: 90%;
 }
-footer ul li i {
-  margin-right: 10px;
+footer ul.footer-list li.utensils:before {
+  content: "\f2e7";
+  margin-right: 15px;
+}
+footer ul.footer-list li.handshake:before {
+  content: "\f4c4";
+  margin-right: 15px;
+  font-size: 12px;
+}
+footer ul.footer-list li:before {
+  font-family: "FontAwesome";
 }
 
 header {
@@ -172,6 +182,7 @@ header img {
   margin-bottom: 15px;
   width: 90%;
   cursor: pointer;
+  background-color: white;
   height: 60px;
   width: 90%;
   padding-left: 10px;
@@ -239,24 +250,29 @@ header {
   padding: 15px 0;
   background-color: #EAEAEA;
   width: 100%;
+  color: #353535;
 }
 #user_loc i {
   margin-right: 15px;
 }
 
-#intro {
+.intro {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 60px;
+  padding: 40px 0;
+  margin-bottom: 50px;
 }
-#intro p, #intro #intro h1 {
+.intro p, .intro h1 {
   width: 75%;
+  margin-bottom: 20px;
 }
-#intro p {
+.intro p {
   font-weight: 300;
+  color: #4D4D4D;
+  font-size: 17px;
 }
 
 #guide {
@@ -265,9 +281,11 @@ header {
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 #guide h2 {
   align-self: flex-start;
+  margin-bottom: 30px;
 }
 #guide .steps {
   display: flex;
@@ -316,18 +334,20 @@ header {
   justify-content: center;
   flex-direction: column;
   background-color: #F6F6F6;
+  padding: 50px 0;
 }
 #restaurants h2 {
   width: 90vw;
+  margin-bottom: 20px;
 }
 #restaurants .card {
-  border: 5px white solid;
   position: relative;
   box-shadow: 5px 5px 5px #eaeaea;
   border-radius: 20px;
   margin-bottom: 15px;
   width: 90%;
   cursor: pointer;
+  background-color: white;
 }
 #restaurants .card img {
   object-fit: cover;
@@ -361,28 +381,29 @@ header {
 #restaurants .card .info .fav {
   margin: 0 15px;
   position: relative;
-  transition: background-image 3s;
-  position: relative;
   font-size: 25px;
-  transition: all 1s;
 }
-#restaurants .card .info .fav .colored-heart {
+
+.heart {
+  z-index: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  transition: opacity 1s;
+}
+.heart--hover {
   position: absolute;
-  top: 0;
-  left: 0;
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
-  transition: opacity 1s;
+  transition: opacity 500ms;
   background-clip: text;
   color: transparent;
+  justify-self: flex-end;
 }
-#restaurants .card .info .fav:hover .colored-heart {
-  opacity: 1;
-  transition: opacity 1s;
-}
-#restaurants .card .info .fav:hover .base-heart {
+.heart:hover {
   opacity: 0;
-  transition: opacity 1s;
+}
+.heart:hover + .heart--hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
