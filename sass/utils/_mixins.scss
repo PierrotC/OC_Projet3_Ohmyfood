@@ -8,7 +8,7 @@
 }
 
 @mixin button {
-    background: linear-gradient(-5deg, $color-primary, $color-secondary);
+    background: $color-gradient-button;
     font-family: $font-roboto;
     color: white;
     padding: 15px;
@@ -19,4 +19,7 @@
     font-size: 16px;
     justify-self: center;
     width: fit-content;
+    // &:hover {
+    //     // background: lighten($color: $color-gradient-button, $amount: 10);
+    // }
 }

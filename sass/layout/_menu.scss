@@ -65,7 +65,7 @@ header {
         width: 90%;
         padding-left: $card-padding;
         grid-template: 1fr 1fr / 1fr 20% 0;
-        transition: grid-template 400ms;
+        transition: all 400ms;
         overflow: hidden;
         &__name {
             font-size: 18px;
