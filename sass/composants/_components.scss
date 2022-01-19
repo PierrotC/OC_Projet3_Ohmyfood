@@ -1,3 +1,13 @@
 button {
     @include button;
 }
+
+#spinner {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    @extend .flex-center;
+    font-size: 5rem;
+    z-index: 1;
+    animation: loading-spinner $spinner-duration both;
+}

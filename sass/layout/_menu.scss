@@ -23,6 +23,9 @@ header {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: menu-appear 2s both;
     & button {
         padding-left: $padding-btn;
         padding-right: $padding-btn;
@@ -113,4 +116,12 @@ header {
             }
         }
     }
+}
+
+@keyframes menu-appear {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 }

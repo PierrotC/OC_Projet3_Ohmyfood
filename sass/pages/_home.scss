@@ -7,6 +7,11 @@ header {
     width: 100%;
 }
 
+#bloc_page.home {
+    opacity: 0;
+    animation: page-appear 700ms $spinner-duration both;
+}
+
 #user_loc {
     display: flex;
     align-items: center;
@@ -140,7 +145,14 @@ header {
                 margin: 0 15px;
                 position: relative;
                 font-size: 25px;
-                // transition: all 1s;
+                color: transparent;
+                -webkit-text-stroke: 1px black;
+                background: none;
+                transition: background 1s;
+                &:hover {
+                    background: linear-gradient($color-primary, $color-secondary) text;
+                    -webkit-text-stroke: 0;
+                }
             }
         }
     }
@@ -165,5 +177,41 @@ header {
         + .heart--hover {
             opacity: 1;
         }
+    }
+}
+
+@keyframes page-appear {    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading-spinner {
+    20% {
+        opacity: .5;
+    }
+
+    40% {
+        opacity: 1;
+    }
+    
+    60% {
+        transform: rotateZ(720deg);
+        opacity: .5
+    }
+    70% {
+        transform: rotateZ(720deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    90% {
+        transform: rotateZ(1080deg);
+    }
+    100% {
+        transform: rotateZ(4500deg);
+        opacity: 0;
     }
 }
