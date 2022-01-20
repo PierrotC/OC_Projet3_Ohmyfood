@@ -13,8 +13,16 @@ header {
     }
 }
 
+main {
+    width: 100vw;
+}
+
 .restaurant-picture {
+    width: 100vw;
+    height: 250px;
     width: 100%;
+    object-fit: cover;
+    height: 250px;
 }
 
 .menu {
@@ -77,6 +85,9 @@ header {
             grid-column: 1;
             align-self: center;
             padding-top: $card-padding;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
         &__price {
             grid-row: 2;

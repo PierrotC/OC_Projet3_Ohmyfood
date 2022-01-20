@@ -144,8 +144,16 @@ header img {
   height: 25px;
 }
 
+main {
+  width: 100vw;
+}
+
 .restaurant-picture {
+  width: 100vw;
+  height: 250px;
   width: 100%;
+  object-fit: cover;
+  height: 250px;
 }
 
 .menu {
@@ -215,6 +223,9 @@ header img {
   grid-column: 1;
   align-self: center;
   padding-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .course__choice__price {
   grid-row: 2;
@@ -413,14 +424,6 @@ header {
   margin: 0 15px;
   position: relative;
   font-size: 25px;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
-  background: none;
-  transition: background 1s;
-}
-#restaurants .card .info .fav:hover {
-  background: linear-gradient(#9356DC, #FF79DA) text;
-  -webkit-text-stroke: 0;
 }
 
 .heart {
