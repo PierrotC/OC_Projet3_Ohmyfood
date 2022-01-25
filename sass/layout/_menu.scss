@@ -27,13 +27,9 @@ main {
 
 .menu {
     position: relative;
-    top: -50px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: menu-appear 2s both;
     & button {
         padding-left: $padding-btn;
         padding-right: $padding-btn;
@@ -56,9 +52,11 @@ main {
 
 .course {
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
+
     .container {
         width: 90%;
+        animation: appear-choice $appear-duration forwards
     }
     &__cat {
         text-transform: uppercase;
@@ -78,6 +76,13 @@ main {
         grid-template: 1fr 1fr / 1fr 20% 0;
         transition: all 400ms;
         overflow: hidden;
+
+        @for $i from 1 through 10 {
+            &:nth-of-type(#{$i}) {
+                animation: appear-choice $appear-duration calc($i * 150ms) forwards;
+            }
+        }
+
         &__name {
             font-size: 18px;
             font-weight: 400;
@@ -127,12 +132,4 @@ main {
             }
         }
     }
-}
-
-@keyframes menu-appear {
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
 }

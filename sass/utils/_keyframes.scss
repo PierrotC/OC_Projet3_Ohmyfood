@@ -1,0 +1,40 @@
+@keyframes appear {    
+    1% {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        z-index: 1;
+    }
+}
+
+@keyframes disappear {
+    100% {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes loading-spinner {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes appear-choice {
+    0% {
+        transform: translateY($move-up-amount);
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,6 @@
+@media (min-width: 800px) {
+    #restaurants {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+    }
+}

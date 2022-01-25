@@ -9,5 +9,11 @@ button {
     @extend .flex-center;
     font-size: 5rem;
     z-index: 1;
-    animation: loading-spinner $spinner-duration both;
+    animation: disappear 1s $spinner-duration forwards;
+    i {
+        animation: loading-spinner calc($spinner-duration / 3) linear infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 }

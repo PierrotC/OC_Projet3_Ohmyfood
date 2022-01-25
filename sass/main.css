@@ -42,6 +42,43 @@
   padding: 10px;
 }
 
+@keyframes appear {
+  1% {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 1;
+  }
+}
+@keyframes disappear {
+  100% {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes loading-spinner {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes appear-choice {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 body {
   width: 100vw;
   margin: 0;
@@ -94,7 +131,13 @@ button:hover {
   height: 100vh;
   font-size: 5rem;
   z-index: 1;
-  animation: loading-spinner 5s both;
+  animation: disappear 1s 30ms forwards;
+}
+#spinner i {
+  animation: loading-spinner 10ms linear infinite;
+}
+#spinner i:hover {
+  animation-play-state: paused;
 }
 
 footer {
@@ -158,13 +201,9 @@ main {
 
 .menu {
   position: relative;
-  top: -50px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   width: 100%;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: menu-appear 2s both;
 }
 .menu button {
   padding-left: 50px;
@@ -191,6 +230,7 @@ main {
 }
 .course .container {
   width: 90%;
+  animation: appear-choice 1s forwards;
 }
 .course__cat {
   text-transform: uppercase;
@@ -215,6 +255,36 @@ main {
   grid-template: 1fr 1fr/1fr 20% 0;
   transition: all 400ms;
   overflow: hidden;
+}
+.course__choice:nth-of-type(1) {
+  animation: appear-choice 1s 150ms forwards;
+}
+.course__choice:nth-of-type(2) {
+  animation: appear-choice 1s 300ms forwards;
+}
+.course__choice:nth-of-type(3) {
+  animation: appear-choice 1s 450ms forwards;
+}
+.course__choice:nth-of-type(4) {
+  animation: appear-choice 1s 600ms forwards;
+}
+.course__choice:nth-of-type(5) {
+  animation: appear-choice 1s 750ms forwards;
+}
+.course__choice:nth-of-type(6) {
+  animation: appear-choice 1s 900ms forwards;
+}
+.course__choice:nth-of-type(7) {
+  animation: appear-choice 1s 1050ms forwards;
+}
+.course__choice:nth-of-type(8) {
+  animation: appear-choice 1s 1200ms forwards;
+}
+.course__choice:nth-of-type(9) {
+  animation: appear-choice 1s 1350ms forwards;
+}
+.course__choice:nth-of-type(10) {
+  animation: appear-choice 1s 1500ms forwards;
 }
 .course__choice__name {
   font-size: 18px;
@@ -265,12 +335,6 @@ main {
   transition-delay: transform 4000ms;
 }
 
-@keyframes menu-appear {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 header {
   display: flex;
   align-items: center;
@@ -282,7 +346,7 @@ header {
 
 #bloc_page.home {
   opacity: 0;
-  animation: page-appear 700ms 5s both;
+  animation: appear 1s 30ms both;
 }
 
 #user_loc {
@@ -306,6 +370,7 @@ header {
   flex-direction: column;
   padding: 40px 0;
   margin-bottom: 50px;
+  width: 100%;
 }
 .intro p, .intro h1 {
   width: 75%;
@@ -384,6 +449,7 @@ header {
 }
 #restaurants .card {
   position: relative;
+  max-width: 500px;
   box-shadow: 5px 5px 5px #eaeaea;
   border-radius: 20px;
   margin-bottom: 15px;
@@ -394,7 +460,7 @@ header {
 #restaurants .card img {
   object-fit: cover;
   width: 100%;
-  height: 50vw;
+  height: 180px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -448,34 +514,13 @@ header {
   opacity: 1;
 }
 
-@keyframes page-appear {
-  100% {
-    opacity: 1;
+@media (min-width: 800px) {
+  #restaurants {
+    display: grid;
+    grid-template: 200px 200px/50% 50%;
   }
-}
-@keyframes loading-spinner {
-  20% {
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    transform: rotateZ(720deg);
-    opacity: 0.5;
-  }
-  70% {
-    transform: rotateZ(720deg);
-  }
-  80% {
-    opacity: 1;
-  }
-  90% {
-    transform: rotateZ(1080deg);
-  }
-  100% {
-    transform: rotateZ(4500deg);
-    opacity: 0;
+  #restaurants h2 {
+    grid-column: 1/span 2;
   }
 }
 
