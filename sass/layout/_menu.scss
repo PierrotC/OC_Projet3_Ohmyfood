@@ -27,6 +27,7 @@ main {
 
 .menu {
     position: relative;
+    top: -60px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
@@ -70,10 +71,9 @@ main {
     }
     &__choice {
         @include card;
-        height: 60px;
+        border-radius: 15px;
+        height: 70px;
         width: 90%;
-        padding-left: $card-padding;
-        grid-template: 1fr 1fr / 1fr 20% 0;
         transition: all 400ms;
         overflow: hidden;
 
@@ -84,12 +84,10 @@ main {
         }
 
         &__name {
-            font-size: 18px;
-            font-weight: 400;
-            padding-bottom: 0;
+            font-size: 17px;
+            margin-bottom: 5px;
             grid-column: 1;
             align-self: center;
-            padding-top: $card-padding;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
@@ -97,9 +95,9 @@ main {
         &__price {
             grid-row: 2;
             grid-column: 2;
-            padding-top: 0;
-            justify-self: center;
+            justify-self: right;
             align-self: center;
+            padding-right: $card-padding;
         }
         &__text {
             grid-row: 2;
@@ -109,26 +107,40 @@ main {
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+            font-size: 16px;
         }
         &__checked {
-            grid-row: 1 / span 2;
-            grid-column: 3;
+            // flex-basis: 0%;
             color: white;
             background-color: $color-tertiary;
             border-top-right-radius: $card-border-radius;
             border-bottom-right-radius: $card-border-radius;
             font-size: 20px;
+            width: 0;
+            // transform: translateX($check-width);
+            transition: all $check-duration ease-in;
+
             .fa-circle-check {
-                transition: transform 700ms;
-                transform: rotate(-360deg);
-                transition-delay: transform 4000ms;
+                transition: transform 1s;
             }
         }
-        &:hover, .course__choice:active {
-            grid-template: 1fr 1fr / 1fr 16% 16%;
-            > .course__choice__checked .fa-circle-check{
-                transform: rotate(0deg);
-                transition-delay: transform 4000ms;
+        &__content {
+            flex-basis: 100%;
+            grid-template: 50% 50% / 1fr 20%;
+            transition: all $check-duration;
+            padding: $card-padding;
+            align-items: center;
+            width: 100%;
+        }
+        &:hover .course__choice__content {
+            width: calc(100% - $check-width);
+            + .course__choice__checked {
+            width: $check-width;
+            // transform: translateX(0);
+            // animation: appear 10ms;
+                > .fa-circle-check{
+                    transform: rotate(360deg);
+                }
             }
         }
     }
