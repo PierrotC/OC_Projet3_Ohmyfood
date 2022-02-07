@@ -1,6 +1,7 @@
-@media (min-width: 800px) {
+@media (min-width: 500px) {
     #restaurants {
         display: grid;
         grid-template: 1fr 1fr / 1fr;
+        align-items: flex-start;
     }
 }

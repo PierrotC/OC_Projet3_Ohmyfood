@@ -1,7 +1,7 @@
 footer {
     color: white;
     background-color: $color-grey-footer;
-    width: 100vw;
+    width: 100%;
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -30,6 +30,16 @@ footer {
         }
         & li:before {
             font-family: "FontAwesome";
+        }
+    }
+    li a {
+        color: white;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 1px solid white;
+        }
+        :visited {
+            color: white;
         }
     }
 }

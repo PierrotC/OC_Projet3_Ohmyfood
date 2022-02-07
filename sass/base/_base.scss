@@ -1,5 +1,5 @@
 body {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     font-family: $font-roboto;
 }
@@ -20,6 +20,6 @@ a {
     color: black;
 }
 
-a:visited {
-    color: black;
-}
+// a:visited {
+//     color: unset;
+// }

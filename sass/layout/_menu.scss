@@ -14,13 +14,12 @@ header {
 }
 
 main {
-    width: 100vw;
+    width: 100%;
 }
 
 .restaurant-picture {
-    width: 100vw;
-    height: 250px;
     width: 100%;
+    height: 250px;
     object-fit: cover;
     height: 250px;
 }
@@ -72,10 +71,9 @@ main {
     &__choice {
         @include card;
         border-radius: 15px;
-        height: 70px;
-        width: 90%;
         transition: all 400ms;
         overflow: hidden;
+        opacity: 0;
 
         @for $i from 1 through 10 {
             &:nth-of-type(#{$i}) {
@@ -110,14 +108,12 @@ main {
             font-size: 16px;
         }
         &__checked {
-            // flex-basis: 0%;
             color: white;
             background-color: $color-tertiary;
             border-top-right-radius: $card-border-radius;
             border-bottom-right-radius: $card-border-radius;
             font-size: 20px;
             width: 0;
-            // transform: translateX($check-width);
             transition: all $check-duration ease-in;
 
             .fa-circle-check {
@@ -136,8 +132,6 @@ main {
             width: calc(100% - $check-width);
             + .course__choice__checked {
             width: $check-width;
-            // transform: translateX(0);
-            // animation: appear 10ms;
                 > .fa-circle-check{
                     transform: rotate(360deg);
                 }
