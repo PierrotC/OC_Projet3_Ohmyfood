@@ -15,6 +15,9 @@ header {
 
 main {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .restaurant-picture {
@@ -30,6 +33,7 @@ main {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
+    max-width: 1000px;
     & button {
         padding-left: $padding-btn;
         padding-right: $padding-btn;
@@ -54,7 +58,7 @@ main {
     align-items: center;
     margin-bottom: 15px; 
 
-    .container {
+    .container_cat {
         width: 90%;
         animation: appear-choice $appear-duration forwards
     }
@@ -74,6 +78,10 @@ main {
         transition: all 400ms;
         overflow: hidden;
         opacity: 0;
+        width: 100%;
+        &__container {
+            width: 90%;
+        }
 
         @for $i from 1 through 10 {
             &:nth-of-type(#{$i}) {
@@ -110,8 +118,6 @@ main {
         &__checked {
             color: white;
             background-color: $color-tertiary;
-            border-top-right-radius: $card-border-radius;
-            border-bottom-right-radius: $card-border-radius;
             font-size: 20px;
             width: 0;
             transition: all $check-duration ease-in;
@@ -137,5 +143,23 @@ main {
                 }
             }
         }
+    }
+}
+
+@media (min-width: 1000px) {
+    .menu {
+        grid-template: auto 1fr 1fr auto/ 50% 50%;
+        .restaurant_head {
+            grid-column: 1 / span 3;
+            text-align: center;
+        }
+        .button {
+            grid-row: 4;
+        }
+    }
+
+    .course:nth-child(4) {
+        grid-row: 3;
+        grid-column: 1 / span 2;
     }
 }

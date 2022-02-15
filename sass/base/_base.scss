@@ -4,6 +4,10 @@ body {
     font-family: $font-roboto;
 }
 
+section {
+    max-width: 1800px;
+}
+
 #bloc_page {
     display: flex;
     align-items: center;
@@ -20,6 +24,6 @@ a {
     color: black;
 }
 
-// a:visited {
-//     color: unset;
-// }
+a:visited {
+    color: unset;
+}
