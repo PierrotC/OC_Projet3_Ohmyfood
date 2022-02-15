@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="sass/main.css" />
+        <link rel="stylesheet" type="text/css" href="sass/style.css" />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,11 @@
     </head>
 
     <body>
-        <div id="spinner"><i class="fa-solid fa-spinner"></i></div>
+        <div id="spinner" class="flex-center">
+            <div class="elt_1"></div>
+            <div class="elt_2"></div>
+            <div class="elt_3"></div>
+        </div>
         <div id="bloc_page" class="home">
             <header>
                 <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood logo" />
@@ -30,130 +34,132 @@
                 <p>Paris, Belleville</p>
             </div>
 
-            <section class="intro bg_grey_2">
-                <h1>Réservez le menu qui vous convient</h1>
+            <main>
+                <section class="intro bg_grey_2">
+                    <h1>Réservez le menu qui vous convient</h1>
 
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
 
-                <a href="#restaurants"><div class="button">Explorer nos restaurants</div></a>
-            </section>
+                    <a href="#restaurants"><div class="button">Explorer nos restaurants</div></a>
+                </section>
 
-            <section id="guide" class="flex-column">
-                <h2>Fonctionnement</h2>
-                <div class="steps flex-column">
-                    <div class="step">
-                        <div>1</div>
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>Choisissez un restaurant</p>
-                    </div>
-
-                    <div class="step">
-                        <div>2</div>
-                        <i class="fas fa-list-ul"></i>
-                        <p>Composez votre menu</p>
-                    </div>
-
-                    <div class="step">
-                        <div>3</div>
-                        <i class="fas fa-store"></i>
-                        <p>Dégustez au restaurant</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="restaurants">
-                <h2>Restaurants</h2>
-                <a href="./pages/palette.html" class="card">
-                    <img src="images/restaurants/palette_du_gout.jpg" alt="A dish from La Palette du Goût" />
-                    <div class="new">Nouveau</div>
-                    <div class="info">
-                        <div class="text"> 
-                            <div class="name">
-                                La Palette du Goût
-                            </div>
-                            <div class="loc">
-                                Ménilmontant
-                            </div>
+                <section id="guide" class="flex-column">
+                    <h2>Fonctionnement</h2>
+                    <div class="steps flex-column">
+                        <div class="step">
+                            <div>1</div>
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Choisissez un restaurant</p>
                         </div>
-                        
-                        <div class="fav flex-center">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="heart--hover">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
+
+                        <div class="step">
+                            <div>2</div>
+                            <i class="fas fa-list-ul"></i>
+                            <p>Composez votre menu</p>
+                        </div>
+
+                        <div class="step">
+                            <div>3</div>
+                            <i class="fas fa-store"></i>
+                            <p>Dégustez au restaurant</p>
                         </div>
                     </div>
-                </a>
+                </section>
 
-                <a href="./pages/enchantee.html" class="card">
-                    <img src="images/restaurants/note_enchantee.jpg" alt="A dish from La Note Enchantée" />
-                    <div class="new">Nouveau</div>
-                    <div class="info">
-                        <div class="text"> 
-                            <div class="name">
-                                La Note enchantée
+                <section id="restaurants">
+                    <h2>Restaurants</h2>
+                    <a href="./pages/palette.html" class="card">
+                        <img src="images/restaurants/palette_du_gout.jpg" alt="A dish from La Palette du Goût" />
+                        <div class="new">Nouveau</div>
+                        <div class="info">
+                            <div class="text"> 
+                                <div class="name">
+                                    La Palette du Goût
+                                </div>
+                                <div class="loc">
+                                    Ménilmontant
+                                </div>
                             </div>
-                            <div class="loc">
-                                Charonne
+                            
+                            <div class="fav flex-center">
+                                <div class="heart">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div class="heart--hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                        <div class="fav flex-center">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="heart--hover">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="./pages/francaise.html" class="card">
-                    <img src="images/restaurants/francaise.jpg" alt="A dish from A la Française" />
-                    <div class="info">
-                        <div class="text"> 
-                            <div class="name">
-                                A la française
+                    <a href="./pages/enchantee.html" class="card">
+                        <img src="images/restaurants/note_enchantee.jpg" alt="A dish from La Note Enchantée" />
+                        <div class="new">Nouveau</div>
+                        <div class="info">
+                            <div class="text"> 
+                                <div class="name">
+                                    La Note enchantée
+                                </div>
+                                <div class="loc">
+                                    Charonne
+                                </div>
                             </div>
-                            <div class="loc">
-                                Cité Rouge
+                            <div class="fav flex-center">
+                                <div class="heart">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div class="heart--hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                        <div class="fav flex-center">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="heart--hover">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="./pages/delice.html" class="card">
-                    <img src="images/restaurants/delice_sens.jpg" alt="A dish from Le délice des sens" />
-                    <div class="info">
-                        <div class="text"> 
-                            <div class="name">
-                                Le délice des sens
+                    <a href="./pages/francaise.html" class="card">
+                        <img src="images/restaurants/francaise.jpg" alt="A dish from A la Française" />
+                        <div class="info">
+                            <div class="text"> 
+                                <div class="name">
+                                    A la française
+                                </div>
+                                <div class="loc">
+                                    Cité Rouge
+                                </div>
                             </div>
-                            <div class="loc">
-                                Folie-Méricourt
+                            <div class="fav flex-center">
+                                <div class="heart">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div class="heart--hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                        <div class="fav flex-center">
-                            <div class="heart">
-                                <i class="fa-solid fa-heart"></i>
+                    </a>
+
+                    <a href="./pages/delice.html" class="card">
+                        <img src="images/restaurants/delice_sens.jpg" alt="A dish from Le délice des sens" />
+                        <div class="info">
+                            <div class="text"> 
+                                <div class="name">
+                                    Le délice des sens
+                                </div>
+                                <div class="loc">
+                                    Folie-Méricourt
+                                </div>
                             </div>
-                            <div class="heart--hover">
-                                <i class="fa-solid fa-heart"></i>
+                            <div class="fav flex-center">
+                                <div class="heart">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div class="heart--hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </section>
+                    </a>
+                </section>
+            </main>
 
             <footer>
                 <ul class="footer-list">

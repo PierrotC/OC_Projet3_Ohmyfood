@@ -28,15 +28,16 @@ main {
 }
 
 .menu {
-    position: relative;
-    top: -60px;
+    // position: relative;
+    margin-top: -60px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
-    max-width: 1000px;
-    & button {
+    max-width: 1300px;
+    & .button {
         padding-left: $padding-btn;
         padding-right: $padding-btn;
+        margin: 40px 0;
     }
 }
 
@@ -48,9 +49,12 @@ main {
         font-size: 27px;
     }
     &__fav {
-        margin: 0 15px;
         font-size: 25px;
         line-height: 1.5;
+    }
+    &__container {
+        justify-content: space-between;
+        width:90%
     }
 }
 
@@ -146,20 +150,24 @@ main {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     .menu {
-        grid-template: auto 1fr 1fr auto/ 50% 50%;
+        grid-template: auto 1fr auto/ 1fr 1fr 1fr;
         .restaurant_head {
             grid-column: 1 / span 3;
             text-align: center;
+            &__container {
+                justify-content: center;
+                width: 95%;
+            }
+            &__name {
+                flex-basis: 100%;
+                font-size: 35px;
+            }
         }
         .button {
-            grid-row: 4;
+            grid-row: 3;
+            grid-column: 1 / span 3;
         }
-    }
-
-    .course:nth-child(4) {
-        grid-row: 3;
-        grid-column: 1 / span 2;
     }
 }

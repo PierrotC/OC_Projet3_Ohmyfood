@@ -3,17 +3,35 @@
 }
 
 #spinner {
+    div {
+        width: $spinner-width;
+        height: $spinner-width;
+        border-radius: 50%;
+        margin: 10px;
+        &.elt {
+            @for $i from 1 to 4 {
+                &_#{$i} {
+                animation: spinner_#{$i} 1.5s ease-in 10;
+                &:hover {
+                    animation-play-state: paused;
+                }
+                }
+            }
+            &_1 {
+                background-color: $color-primary;
+            }
+            &_2 {
+                background-color: $color-secondary;
+            }
+            &_3 {
+                background-color: $color-tertiary;
+            }
+        }
+    }
     position: absolute;
     width: 100%;
     height: 100vh;
-    @extend .flex-center;
-    font-size: 5rem;
+    top: 0;
     z-index: 1;
     animation: disappear 1s $spinner-duration forwards;
-    i {
-        animation: loading-spinner calc($spinner-duration / 3) linear infinite;
-        &:hover {
-            animation-play-state: paused;
-        }
-    }
 }

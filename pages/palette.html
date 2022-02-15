@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+        <link rel="stylesheet" type="text/css" href="../sass/style.css" />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,104 +29,123 @@
                 <img class="restaurant-picture" src="../images/restaurants/palette_du_gout.jpg" alt="A dish from La Palette du Goût" />
                 
                 <div class="menu bg_grey_2 grid">
-                    <div class="restaurant_head flex-row">
-                        <h1 class="restaurant_head__name">La palette du goût</h1>
-                        <i class="restaurant_head__fav far fa-heart flex-column"></i>
+                    <div class="restaurant_head flex-center">
+                        <div class="restaurant_head__container flex-row">
+                            <h1 class="restaurant_head__name">La palette du goût</h1>
+                            <i class="restaurant_head__fav far fa-heart flex-column"></i>
+                        </div>
                     </div>
 
                     <section class="course flex-column">
 
-                        <div class="container flex-column">
+                        <div class="container_cat flex-column">
                             <div class="course__cat typo_light">
                                 Entrées
                             </div>
                             <div class="course__div"></div>
                         </div>
+                        <div class="course__choice__container">
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Fricassée d'escargot</h2>
+                                    <div class="course__choice__text typo_light">Au piment d'Espelette</div>
+                                    <div class="course__choice__price typo_bold">25€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
 
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Fricassée d'escargot</h2>
-                            <div class="course__choice__text typo_light">Au piment d'espelette</div>
-                            <div class="course__choice__price typo_bold">25€</div>
-                            
-                        </div>
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Foie gras de canard mi-cuit</h2>
+                                    <div class="course__choice__text typo_light">Et ses copeaux de truffe noire</div>
+                                    <div class="course__choice__price typo_bold">35€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
 
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Foie gras de canard mi-cuit</h2>
-                            <div class="course__choice__text typo_light">Et ses copeaux de truffe noire</div>
-                            <div class="course__choice__price typo_bold">35€</div>
-                        </div>
-
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Oeuf au plat</h2>
-                            <div class="course__choice__text typo_light">Assaisonné à la truffe sur lit de caviar</div>
-                            <div class="course__choice__price typo_bold">20€</div>
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Oeuf au plat</h2>
+                                    <div class="course__choice__text typo_light">Assaisonné à la truffe sur lit de caviar</div>
+                                    <div class="course__choice__price typo_bold">20€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
                         </div>
                     </section>
 
                     <section class="course flex-column">
-                        <div class="container flex-column">
+                        <div class="container_cat flex-column">
                             <div class="course__cat typo_light">
                                 Plats
                             </div>
                             <div class="course__div"></div>
                         </div>
+                        <div class="course__choice__container">
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Filet de boeuf aux herbes</h2>
+                                    <div class="course__choice__text typo_light">Accompagné de sa ribambelle de légumes</div>
+                                    <div class="course__choice__price typo_bold">40€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
 
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Filet de boeuf aux herbes</h2>
-                            <div class="course__choice__text typo_light">Accompagné de sa ribambelle de légumes</div>
-                            <div class="course__choice__price typo_bold">40€</div>
-                            
-                        </div>
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Parmentier de queue de boeuf</h2>
+                                    <div class="course__choice__text typo_light">A la truffe noire sur sa purée de panais</div>
+                                    <div class="course__choice__price typo_bold">35€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
 
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Parmentier de queue de boeuf</h2>
-                            <div class="course__choice__text typo_light">À la truffe noire sur sa purée de panais</div>
-                            <div class="course__choice__price typo_bold">35€</div>
-                        </div>
-
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Filet de turbot</h2>
-                            <div class="course__choice__text typo_light">Aux agrumes</div>
-                            <div class="course__choice__price typo_bold">44€</div>
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Filet de turbot</h2>
+                                    <div class="course__choice__text typo_light">Aux agrumes</div>
+                                    <div class="course__choice__price typo_bold">44€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
                         </div>
                     </section>
 
                     <section class="course flex-column">
-                        <div class="container flex-column">
+                        <div class="container_cat flex-column">
                             <div class="course__cat typo_light">
                                 Desserts
                             </div>
                             <div class="course__div"></div>
                         </div>
-                    
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Paris-Brest</h2>
-                            <div class="course__choice__text typo_light">Revisité</div>
-                            <div class="course__choice__price typo_bold">18€</div>
-                            
-                        </div>
+                        <div class="course__choice__container">
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Paris-Brest</h2>
+                                    <div class="course__choice__text typo_light">Revisité</div>
+                                    <div class="course__choice__price typo_bold">18€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
 
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Macaron au chocolat d'exception</h2>
-                            <div class="course__choice__text typo_light">Et glace à la vanille de Madagascar</div>
-                            <div class="course__choice__price typo_bold">22€</div>
-                        </div>
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Macaron au chocolat d'exception</h2>
+                                    <div class="course__choice__text typo_light">Et glace à la vanille de Madagascar</div>
+                                    <div class="course__choice__price typo_bold">22€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
 
-                        <div class="course__choice bg_white grid">
-                            <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <h2 class="course__choice__name typo_bold">Mousse au chocolat</h2>
-                            <div class="course__choice__text typo_light">Au piment d'Espelette et à la truffe noire</div>
-                            <div class="course__choice__price typo_bold">23€</div>
+                            <div class="course__choice bg_white flex-row">
+                                <div class="course__choice__content grid">
+                                    <h2 class="course__choice__name typo_bold">Mousse au chocolat</h2>
+                                    <div class="course__choice__text typo_light">Au piment d'Espelette et à la truffe noire</div>
+                                    <div class="course__choice__price typo_bold">23€</div>
+                                </div>
+                                <div class="course__choice__checked flex-center"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
                         </div>
-
                     </section>
 
                     <div class="button">Commander</div>
