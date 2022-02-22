@@ -10,6 +10,7 @@ header {
 #bloc_page.home {
     opacity: 0;
     animation: appear 1s $spinner-duration both;
+    overflow: hidden;
 }
 
 #user_loc {

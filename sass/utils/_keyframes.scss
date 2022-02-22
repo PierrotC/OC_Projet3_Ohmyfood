@@ -17,12 +17,7 @@
         display: none;
         visibility: hidden;
         opacity: 0;
-    }
-}
-
-@keyframes loading-spinner {
-    100% {
-        transform: rotateZ(360deg);
+        overflow: visible;
     }
 }
 

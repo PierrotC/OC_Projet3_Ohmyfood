@@ -60,11 +60,7 @@
     display: none;
     visibility: hidden;
     opacity: 0;
-  }
-}
-@keyframes loading-spinner {
-  100% {
-    transform: rotateZ(360deg);
+    overflow: visible;
   }
 }
 @keyframes appear-choice {
@@ -308,6 +304,9 @@ main {
   font-size: 25px;
   line-height: 1.5;
 }
+.restaurant_head__fav .heart {
+  color: unset;
+}
 .restaurant_head__container {
   justify-content: space-between;
   width: 90%;
@@ -464,6 +463,7 @@ header {
 #bloc_page.home {
   opacity: 0;
   animation: appear 1s 5s both;
+  overflow: hidden;
 }
 
 #user_loc {

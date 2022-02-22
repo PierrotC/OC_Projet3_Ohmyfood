@@ -51,6 +51,9 @@ main {
     &__fav {
         font-size: 25px;
         line-height: 1.5;
+        .heart {
+            color: unset;
+        }
     }
     &__container {
         justify-content: space-between;
