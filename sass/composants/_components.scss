@@ -35,3 +35,11 @@
     z-index: 1;
     animation: disappear 1s $spinner-duration forwards;
 }
+
+input {
+    background-color: $color-grey-back-1;
+    color: $color-grey-footer;
+    border: none;
+    font-size: 17px;
+    width: 130px;
+}

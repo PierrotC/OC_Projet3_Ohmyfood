@@ -208,6 +208,14 @@ a:visited {
   background-color: #99E2D0;
 }
 
+input {
+  background-color: #EAEAEA;
+  color: #353535;
+  border: none;
+  font-size: 17px;
+  width: 130px;
+}
+
 footer {
   color: white;
   background-color: #353535;
